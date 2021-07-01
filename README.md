@@ -4,7 +4,7 @@ Cho Lược đồ cơ sở dữ liệu quản lý nhân viên của một công 
 
 Nhanvien(MANV,HOTEN, NU,NGAYSINH,LUONG,MAPB, MACV)
 Mỗi nhân viên có một mã nhân viên (MANV) duy nhất, mỗi mã nhân viên xác định họ
-và tên nhân viên (HOTEN), giới tính (NU), lƣơng (LUONG), mã phòng ban (MAPB), mã
+và tên nhân viên (HOTEN), giới tính (NU), lương (LUONG), mã phòng ban (MAPB), mã
 chức vụ (MACV).
 
 Phongban(MAPB,TENPB,TRUSO,MANVPHUTRACH,KINHPHI,DOANHTHU)
@@ -82,7 +82,7 @@ WHERE
 ```
 UPDATE:
 ```bash
-SELECT MANV, HOTEN, LUONG*12
+SELECT MANV, HOTEN, (LUONG)*12
 FROM NHANVIEN
 ```
 ## Bài 40.10/d :
