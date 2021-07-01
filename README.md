@@ -28,14 +28,13 @@ d.Lập những phòng ban có kinh phí hoạt động cao nhất.
 
 e.Lập danh sách nhân viên của phòng ban có mã số phòng ban là 40.
 
-f Lập danh sách nhân viên của phòng có mã số phòng ban 10,30,50.
+f.Lập danh sách nhân viên của phòng có mã số phòng ban 10,30,50.
 
 g.Lập danh sách các nhân viên có lương tháng từ 2.500.000 đến 4.000.000
 
 h.Tìm những nhân viên có tuổi cao nhất thuộc phòng ban có MAPB là 10
 
 i.Lập danh sách các nhân viên của phòng 10,30,50. kết quả in ra theo thứ tự tăng dần
-
 của mã phòng nếu trùng mã phòng thì sắp xếp giảm dần theo mức lương.
 
 k.Lập danh sách các nhân viên phòng 10,30,50, chỉ in ra những người là lãnh đạo của
@@ -65,22 +64,12 @@ s.Cho biết số lượng nhân viên của mỗi phòng ban.
 SELECT *
 FROM PHONGBAN
 ```
-Giải Thích :
-```bash
-Chọn Tất Cả Từ PHONGBAN
-Không còn gì để giải thích thêm.
-```
 
 ## Bài 40.10/b :
 ```bash
 SELECT *
 FROM NHANVIEN
 WHERE MONTH([NGAYSINH]) = '10'
-```
-
-Giải Thích :
-```bash
-Chọn Tất Cả Từ NHANVIEN Tìm Tháng Sinh Của Nhân Viên Có Tháng 10
 ```
 
 ## Bài 40.10/c :
@@ -91,9 +80,73 @@ FROM NHANVIEN A INNER JOIN CHUCVU B ON A.MACV = B.MACV
 WHERE 
 ```
 
-Giải Thích :
+## Bài 40.10/d :
+Bài Làm :
 ```bash
-Chọn A.MANV, A.HOTEN, (B.LUONGTHAPNHAT)*12 Như LUONGTHAPNHAT
-Từ NHANVIEN A Trả về các bản ghi có giá trị phù hợp trong cả hai bảng Chức vụ B Trên A.MACV = B.MACV  
+```
 
+## Bài 40.10/e :
+Bài Làm :
+```bash
+```
+
+## Bài 40.10/f :
+Bài Làm :
+```bash
+```
+
+## Bài 40.10/g :
+Bài Làm :
+```bash
+```
+
+
+## Bài 40.10/h :
+Bài Làm :
+```bash
+```
+
+## Bài 40.10/i :
+Bài Làm :
+```bash
+```
+
+## Bài 40.10/k :
+Bài Làm :
+```bash
+```
+
+## Bài 40.10/l :
+Bài Làm :
+```bash
+```
+
+## Bài 40.10/n :
+Bài Làm :
+```bash
+```
+
+## Bài 40.10/o :
+Bài Làm :
+```bash
+```
+
+## Bài 40.10/p :
+Bài Làm :
+```bash
+```
+
+## Bài 40.10/q :
+Bài Làm :
+```bash
+```
+
+## Bài 40.10/r :
+Bài Làm :
+```bash
+```
+
+## Bài 40.10/s :
+Bài Làm :
+```bash
 ```
