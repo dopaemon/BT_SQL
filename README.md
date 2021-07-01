@@ -1,15 +1,17 @@
 # Bài 40.10
 ```bash
 Cho Lược đồ cơ sở dữ liệu quản lý nhân viên của một công ty nhƣ sau:
-__Nhanvien__(MANV,HOTEN, NU,NGAYSINH,LUONG,MAPB, MACV)
+
+Nhanvien(MANV,HOTEN, NU,NGAYSINH,LUONG,MAPB, MACV)
 Mỗi nhân viên có một mã nhân viên (MANV) duy nhất, mỗi mã nhân viên xác định họ
 và tên nhân viên (HOTEN), giới tính (NU), lƣơng (LUONG), mã phòng ban (MAPB), mã
 chức vụ (MACV).
-__Phongban__(MAPB,TENPB,TRUSO,MANVPHUTRACH,KINHPHI,DOANHTHU)
+
+Phongban(MAPB,TENPB,TRUSO,MANVPHUTRACH,KINHPHI,DOANHTHU)
 Mỗi phòng ban có tên gọi phòng ban(TENPB), địa điểm đặt trụ sở (TRUSO), mã nhân
-viên phụ trách(MANVPHUTRACH), kinh phí hoạt động (KINHPHI), và doanh
-thu(DOANHTHU)
-__Chucvu__(MACV,TENCV,LUONGTHAPNHAT,LUONGCAONHAT)
+viên phụ trách(MANVPHUTRACH), kinh phí hoạt động (KINHPHI), và doanh thu(DOANHTHU)
+
+Chucvu(MACV,TENCV,LUONGTHAPNHAT,LUONGCAONHAT)
 Mỗi chức vụ co tên gọi chức vụ (TENCV), mức lương tối
 thiểu(LUONGTHAPNHAT), mức lương tối đa (LUONGCAONHAT).
 Hãy biểu diễn các câu hỏi sau bằng SQL
