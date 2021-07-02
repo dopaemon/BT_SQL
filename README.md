@@ -179,19 +179,28 @@ WHERE a.MAPB = (SELECT b.MAPB FROM Nhanvien b WHERE b.HOTEN = 'NGUYEN VAN THANH'
 ## Bài 40.10/p :
 Bài Làm :
 ```bash
+SELECT * 
+FROM Nhanvien a 
+WHERE a.MAPB = (SELECT b.MAPB FROM Nhanvien b WHERE b.HOTEN = 'NGUYEN VAN THANH') AND a.LUONG = (SELECT b.LUONGCAONHAT FROM Phongban b WHERE b.MAPB = a.MAPB)
 ```
 
 ## Bài 40.10/q :
 Bài Làm :
 ```bash
+
 ```
 
 ## Bài 40.10/r :
 Bài Làm :
 ```bash
+SELECT MANV, MAX(LUONG), DISTINCT MAPB
+FROM Phongban, Nhanvien
 ```
 
 ## Bài 40.10/s :
 Bài Làm :
 ```bash
+SELECT TENPB, MAPB, COUNT(MANV) AS "So luong nhan vien"
+FROM Phongban, Nhanvien
+GROUP BY TENPB;
 ```
