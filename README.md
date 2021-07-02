@@ -1,4 +1,8 @@
-# Bài 40.10
+# Bài Tập SQL
+# Tên : Trần Nguyễn Tuấn Anh
+# Lớp T3K21
+
+## Bài 40.10
 ```bash
 Cho Lược đồ cơ sở dữ liệu quản lý nhân viên của một công ty nhƣ sau:
 
@@ -59,20 +63,20 @@ r.Cho biết các nhân viên có mức lương cao nhất của các phòng ban
 
 s.Cho biết số lượng nhân viên của mỗi phòng ban.
 ```
-## Bài 40.10/a :
+### Bài 40.10/a :
 ```bash
 SELECT *
 FROM PHONGBAN
 ```
 
-## Bài 40.10/b :
+### Bài 40.10/b :
 ```bash
 SELECT *
 FROM NHANVIEN
 WHERE MONTH([NGAYSINH]) = '10'
 ```
 
-## Bài 40.10/c :
+### Bài 40.10/c :
 Bài Làm :
 OLD:
 ```bash
@@ -85,14 +89,14 @@ UPDATE:
 SELECT MANV, HOTEN, (LUONG)*12
 FROM NHANVIEN
 ```
-## Bài 40.10/d :
+### Bài 40.10/d :
 Bài Làm :
 ```bash
 SELECT MAPB, TENPB, TRUSO, MANVPHUTRACH, DOANHTHU, MAX(KINHPHI)
 FROM PHONGBAN
 ```
 
-## Bài 40.10/e :
+### Bài 40.10/e :
 Bài Làm :
 ```bash
 SELECT MANV, HOTEN, NU, NGAYSINH, LUONG, MACV
@@ -100,7 +104,7 @@ FROM NHANVIEN
 WHERE MAPB = 40
 ```
 
-## Bài 40.10/f :
+### Bài 40.10/f :
 Bài Làm :
 ```bash
 SELECT MANV, HOTEN, NU, NGAYSINH, LUONG, MACV
@@ -114,7 +118,7 @@ FROM NHANVIEN
 WHERE MAPB IN (10,30,50)
 ```
 
-## Bài 40.10/g :
+### Bài 40.10/g :
 Bài Làm :
 ```bash
 SELECT MANV,HOTEN, NU,NGAYSINH,LUONG,MAPB, MACV
@@ -128,7 +132,7 @@ FROM NHANVIEN
 WHERE LUONG BETWEEN 2500000 AND 4000000
 ```
 
-## Bài 40.10/h :
+### Bài 40.10/h :
 Bài Làm :
 ```bash
 SELECT MANV,HOTEN, NU,NGAYSINH,LUONG,MAPB, MACV 
@@ -136,7 +140,7 @@ FROM NHANVIEN
 WHERE YEAR(NGAYSINH) = (SELECT YEAR(NGAYSINH) FROM NHANVIEN ORDER BY NGAYSINH ASC LIMIT 1) AND MAPB = 10
 ```
 
-## Bài 40.10/i :
+### Bài 40.10/i :
 Bài Làm :
 ```bash
 SELECT MANV,HOTEN, NU,NGAYSINH,LUONG,MAPB, MACV
@@ -144,7 +148,7 @@ FROM NHANVIEN
 WHERE MAPB IN (10,30,50) GROUP BY MAPB ORDER BY MAPB ASC, LUONG DESC
 ```
 
-## Bài 40.10/k :
+### Bài 40.10/k :
 Bài Làm :
 ```bash
 SELECT MANV, HOTEN, NU, NGAYSINH, LUONG, MAPB, MACV 
@@ -152,7 +156,7 @@ FROM NHANVIEN
 WHERE MANV IN (SELECT MANVPHUTRACH FROM Phongban WHERE MAPB IN (10,30,50))
 ```
 
-## Bài 40.10/l :
+### Bài 40.10/l :
 Bài Làm :
 ```bash
 SELECT *
@@ -160,7 +164,7 @@ FROM Phongban
 WHERE MAPB IN (SELECT DISTINCT MAPB FROM Nhanvien a WHERE a.LUONG >= 4000000)
 ```
 
-## Bài 40.10/n :
+### Bài 40.10/n :
 Bài Làm :
 ```bash
 SELECT *
@@ -168,7 +172,7 @@ FROM Nhanvien
 WHERE MAPB = (SELECT b.MAPB FROM Nhanvien b WHERE b.HOTEN = 'NGUYEN VAN THANH')
 ```
 
-## Bài 40.10/o :
+### Bài 40.10/o :
 Bài Làm :
 ```bash
 SELECT * 
@@ -176,7 +180,7 @@ FROM Nhanvien a
 WHERE a.MAPB = (SELECT b.MAPB FROM Nhanvien b WHERE b.HOTEN = 'NGUYEN VAN THANH') AND a.MANV = (SELECT b.MANVPHUTRACH FROM Phongban b WHERE b.MAPB = a.MAPB)
 ```
 
-## Bài 40.10/p :
+### Bài 40.10/p :
 Bài Làm :
 ```bash
 SELECT * 
@@ -184,20 +188,22 @@ FROM Nhanvien a
 WHERE a.MAPB = (SELECT b.MAPB FROM Nhanvien b WHERE b.HOTEN = 'NGUYEN VAN THANH') AND a.LUONG = (SELECT b.LUONGCAONHAT FROM Phongban b WHERE b.MAPB = a.MAPB)
 ```
 
-## Bài 40.10/q :
+### Bài 40.10/q :
 Bài Làm :
 ```bash
-
+SELECT MAPB, COUNT(MANV), MIN(LUONG), MAX(LUONG), AVG(LUONG)
+FROM NHANVIEN
+GROUP BY MAPB
 ```
 
-## Bài 40.10/r :
+### Bài 40.10/r :
 Bài Làm :
 ```bash
 SELECT MANV, MAX(LUONG), DISTINCT MAPB
 FROM Phongban, Nhanvien
 ```
 
-## Bài 40.10/s :
+### Bài 40.10/s :
 Bài Làm :
 ```bash
 SELECT TENPB, MAPB, COUNT(MANV) AS "So luong nhan vien"
