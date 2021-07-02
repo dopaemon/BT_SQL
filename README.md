@@ -2,8 +2,8 @@
 # Tên : Trần Nguyễn Tuấn Anh
 # Lớp T3K21
 ## Bài Tập Có Dùng Các Tài Liệu Tham Khảo Tại
-[**W3SCHOOL**](https://www.w3schools.com/sql/)
-[**QUANTRIMANG**](https://quantrimang.com/)
+* [**W3SCHOOL**](https://www.w3schools.com/sql/)
+* [**QUANTRIMANG**](https://quantrimang.com/)
 
 ## Bài 40.10
 ```bash
