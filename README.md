@@ -70,6 +70,7 @@ s.Cho biết số lượng nhân viên của mỗi phòng ban.
 ```bash
 SELECT *
 FROM Phongban
+```
 
 ### Bài 40.10/b :
 ```bash
